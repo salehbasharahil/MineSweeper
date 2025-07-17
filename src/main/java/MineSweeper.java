@@ -22,8 +22,16 @@ public class MineSweeper {
             while (true) {
                 game.printBoard();
                 String revealCoordinates = inputReader.readLine(sizeofGrid);
-                if (!game.revealCell(revealCoordinates, sizeofGrid)) {
+                int revealNosOfSquares= game.revealSquare(revealCoordinates,sizeofGrid);
+                if (revealNosOfSquares==-1) {
                     System.out.println("Oh no, you detonated a mine! Game over.");
+                    break;
+                } else {
+                    System.out.println("This square contains " + revealNosOfSquares + " adjacent mine");
+                }
+
+                if (game.hasPlayerWonCheck()) {
+                    System.out.println("Congratulations, you have won the game!");
                     break;
                 }
             }
@@ -33,6 +41,7 @@ public class MineSweeper {
 
             if(!ans){
                 System.out.println("Thanks for playing");
+                inputReader.close();
                 break;
             }
         }

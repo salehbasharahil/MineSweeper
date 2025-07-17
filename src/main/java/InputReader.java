@@ -6,4 +6,6 @@ public interface InputReader {
     int readInt(int sizeOfGrid);
 
     Boolean readResponse();
+
+    void close();
 }

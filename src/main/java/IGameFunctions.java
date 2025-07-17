@@ -1,10 +1,13 @@
 public interface IGameFunctions {
+
     void placeMines();
 
     void printBoard();
 
     void calculateNeighboringMines();
 
-    boolean revealCell(String input, int sideLength);
+    int revealSquare(String input, int sideLength);
+
+    boolean hasPlayerWonCheck();
 
 }

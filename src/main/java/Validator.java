@@ -14,6 +14,7 @@ public class Validator {
         String secondChar = input.substring(1);
 
         if (firstChar < 'A' || firstChar >= ('A' + length)) return false;
+        if (!secondChar.matches("\\d+")) return false;
 
         int col = Integer.parseInt(secondChar) - 1;
         int row = firstChar - 'A';
