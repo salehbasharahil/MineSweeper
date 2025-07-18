@@ -1,7 +1,8 @@
-public class Square{
+public class Square {
     private boolean isMine;
     private boolean isRevealed;
     private int neighboringMines;
+
     public Square() {
         isMine = false;
         isRevealed = false;

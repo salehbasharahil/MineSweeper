@@ -9,5 +9,4 @@ public interface IGameVariables {
 
     void incrementCount();
 
-    void resetCount();
 }
